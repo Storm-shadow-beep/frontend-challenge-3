@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../../assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="type.css">
+</head>
+<body>
+    <div>
+    <header>
+            <img src="../../assets/images/logo-large.svg" alt="game logo" class="logo">
+            <div>
+                <p><img src="../../assets/images/icon-personal-best.svg" alt="prize logo">Personal best: <span></span></p>
+            </div>
+    </header>
+    <div class="init">
+    <section class="nav">
+            <div class="stats">
+                <p>WPM:       <span>10</span> |</p>
+                <p>Accuracy:       <span>60</span>%  |</p>
+                <p>Time      <span>0:00</span></p>
+            </div>
+            <div class="modes">
+                <div style="display: flex; gap: 9px;">
+                    <ul>
+                        <button>Easy</button>
+                        <button>Medium</button>
+                        <button>Hard</button>
+                    </ul>
+                    <p>|</p> 
+                </div>
+
+                <div class="end">
+                    <p>Mode:</p>
+                    <button>Timed(<span></span>)</button>
+                    <button>Passage</button>
+                </div>
+            </div>
+    </section>
+    <section class="main-body">
+        <div>
+            <p id="para"></p>
+            <div class="who">
+                <button>Start Typing Test</button>
+                <p>Or click the text and start typing</p>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="ATH">
+    <div>
+        <div class="logo-grow-wrapper"><img src="../../assets/images/icon-completed.svg" alt="completed logo" class="logo-svg" id="img"></div>
+        <h1 id="celeb-H">Baseline Established!</h1>
+        <p id="celeb-p">You've set the bar. Now the real challenge begins-time to beat it.</p>
+        <div>
+            <div>
+                <h3>WPM:</h3>
+                <p>10</p>
+            </div>
+            <div>
+                <h3>Accuracy:</h3>
+                <p>90%</p>
+            </div>
+            <div>
+                <h3>Characters</h3>
+                <p>120/5</p>
+            </div>
+        </div>
+        <button style="background-color: white;display: flex;justify-content: center;color: black;" id="restart">Beat This Score  <img src="../../assets/images/icon-restart.svg" alt="restart allow" style="background-color: black;border-radius: 10px;height: 15px;"></button>
+    </div>
+</div>
+</div>
+<script src="try.js"></script>
+</body>
+</html>
