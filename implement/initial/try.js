@@ -5,7 +5,7 @@ const icon = document.getElementById("img")
 const head = document.getElementById("celeb-H")
 const parag = document.getElementById("celeb-p")
 
-para.style.filter = "blur(2px)"
+para.style.filter = "blur(3px)"
 
 const buttons = document.querySelectorAll('.bt')
 
