@@ -34,7 +34,10 @@ body{
 
 header{
     display: flex;
-    justify-content: space-between;
+    gap: 700px;
+    margin: 0px, 0px, 50px, 50px;
+    justify-content: center;
+    flex-shrink: 0;
     align-items: center;
     margin-bottom: 30px;
 }
@@ -179,4 +182,10 @@ button:hover{
     0 0 0 20px rgba(76, 175, 80, 0.1),
     0 0 0 40px rgba(76, 175, 80, 0.05)
     ;
+}
+
+#para{
+    min-width: 10px;
+    margin: 0px, 0px, 50px, 50px;
+    font-size: 30px;
 }

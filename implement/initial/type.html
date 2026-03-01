@@ -18,9 +18,9 @@
     <div class="init">
     <section class="nav">
             <div class="stats">
-                <p>WPM:       <span>10</span> |</p>
-                <p>Accuracy:       <span>60</span>%  |</p>
-                <p>Time      <span>0:00</span></p>
+                <p>WPM:       <span id="wpm">0</span> |</p>
+                <p>Accuracy:       <span id="acc">0</span>%  |</p>
+                <p>Time      <span id="time"></span></p>
             </div>
             <div class="modes">
                 <div style="display: flex; gap: 9px;">
@@ -43,7 +43,7 @@
         <div>
             <p id="para"></p>
             <div class="who">
-                <button>Start Typing Test</button>
+                <button id="start">Start Typing Test</button>
                 <p>Or click the text and start typing</p>
             </div>
         </div>

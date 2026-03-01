@@ -4,12 +4,13 @@ const para = document.getElementById("para")
 const icon = document.getElementById("img")
 const head = document.getElementById("celeb-H")
 const parag = document.getElementById("celeb-p")
-const rando = Math.floor(Math.random()*10)
+
 para.style.filter = "blur(2px)"
-let text;
 
 const buttons = document.querySelectorAll('.bt')
 
+
+//paragraph level logic
 buttons.forEach(button => {
     button.addEventListener('click',()=>{
         const level = button.getAttribute('data-level');
@@ -18,6 +19,8 @@ buttons.forEach(button => {
 })
 
 function setFunc(n){
+    let rando = Math.floor(Math.random()*10)
+    let text = "";
     if (n === 'easy') {
         text = paragraph.easy[rando].text
     }
@@ -27,6 +30,8 @@ function setFunc(n){
     else{
         text = paragraph.hard[rando].text
     }
+
+    para.innerHTML = "";
     const char = text.split('')
 
     char.forEach(element => {
@@ -35,4 +40,33 @@ function setFunc(n){
         span.classList.add('char')
         para.appendChild(span)
     });
+}
+
+//time logic
+
+let startTime;
+let timerInterval;
+const timeDisplay = document.getElementById("time")
+
+function startTimer() {
+    startTime = Date.now();
+    
+    timerInterval = setInterval(()=>
+        { 
+            const currentTime = Date.now();
+            const elapsedTime = currentTime - startTime;
+            const seconds = Math.floor(elapsedTime/1000);
+            const milliseconds = Math.floor((elapsedTime % 1000) / 10);
+            timeDisplay.innerText = `${seconds}: ${milliseconds.toString().padStart(2,'0')}`;
+
+
+        },10
+);
+
+console.log("started");
+
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
 }
