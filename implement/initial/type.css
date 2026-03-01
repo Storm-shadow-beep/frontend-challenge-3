@@ -118,11 +118,11 @@ button:hover{
 }
 
 .init{
-    display: none;
+    /* display: none; */
 }
 
 .ATH{
-    display: flex;
+    display: none;
     justify-content: center;
 }
 
