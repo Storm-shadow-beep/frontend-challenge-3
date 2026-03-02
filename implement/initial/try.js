@@ -43,10 +43,17 @@ function setFunc(n){
 }
 
 //time logic
-
+let start = document.querySelector('#start')
 let startTime;
 let timerInterval;
 const timeDisplay = document.getElementById("time")
+
+start.addEventListener('click',()=>{
+    const who = document.querySelector('.who')
+    who.style.display = "none"
+    para.style.filter = "blur(0px)"
+    startTimer();
+})
 
 function startTimer() {
     startTime = Date.now();
@@ -60,7 +67,7 @@ function startTimer() {
             timeDisplay.innerText = `${seconds}: ${milliseconds.toString().padStart(2,'0')}`;
 
 
-        },10
+        },100
 );
 
 console.log("started");
@@ -70,3 +77,5 @@ console.log("started");
 function stopTimer() {
     clearInterval(timerInterval);
 }
+
+//typing logic
