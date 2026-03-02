@@ -1,9 +1,13 @@
 import paragraph from '../../data.json' with {type: 'json'};
 
+//nodes from the dom and other variables
 const para = document.getElementById("para")
 const icon = document.getElementById("img")
 const head = document.getElementById("celeb-H")
 const parag = document.getElementById("celeb-p")
+
+let charIndex = 0
+let mistakes = 0
 
 para.style.filter = "blur(3px)"
 
@@ -19,6 +23,8 @@ buttons.forEach(button => {
 })
 
 function setFunc(n){
+    charIndex = 0
+    mistakes = 0
     let rando = Math.floor(Math.random()*10)
     let text = "";
     if (n === 'easy') {
@@ -79,3 +85,37 @@ function stopTimer() {
 }
 
 //typing logic
+
+window.addEventListener('keydown',(e)=>{
+    const characters = para.querySelectorAll('span')
+
+    if (charIndex >= characters.length || characters.length === 0) {
+        return
+    }
+
+    const typedChar = e.key
+    const targetChar = characters[charIndex].innerText
+
+    if(typedChar.length !== 1) return;
+
+    if (typedChar === targetChar) {
+        characters[charIndex].style.color = "green"
+    }else{
+        mistakes++
+        characters[charIndex].style.color = "red"
+    }
+
+    charIndex++
+
+    updateStats(characters.length)
+
+    if(charIndex === characters.length){
+        stopTimer()
+        console.log('stopped')
+    }
+});
+
+function updateStats(totalChars){
+    let accuracy = Math.round(((charIndex - mistakes) / charIndex) * 100)
+    document.getElementById('acc').innerText = accuracy > 0? accuracy:0;
+}
