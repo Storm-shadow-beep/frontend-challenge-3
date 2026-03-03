@@ -8,11 +8,19 @@ const parag = document.getElementById("celeb-p")
 
 let charIndex = 0
 let mistakes = 0
+let text = paragraph.easy[0].text
+let char = text.split('')
 
 para.style.filter = "blur(3px)"
 
 const buttons = document.querySelectorAll('.bt')
 
+char.forEach(element => {
+        const span = document.createElement('span')
+        span.innerText = element
+        span.classList.add('char')
+        para.appendChild(span)
+});
 
 //paragraph level logic
 buttons.forEach(button => {
@@ -26,7 +34,7 @@ function setFunc(n){
     charIndex = 0
     mistakes = 0
     let rando = Math.floor(Math.random()*10)
-    let text = "";
+    text = "";
     if (n === 'easy') {
         text = paragraph.easy[rando].text
     }
@@ -38,7 +46,7 @@ function setFunc(n){
     }
 
     para.innerHTML = "";
-    const char = text.split('')
+    char = text.split('')
 
     char.forEach(element => {
         const span = document.createElement('span')
