@@ -12,10 +12,10 @@
     <header>
             <img src="../../assets/images/logo-large.svg" alt="game logo" class="logo">
             <div>
-                <p><img src="../../assets/images/icon-personal-best.svg" alt="prize logo">Personal best: <span></span></p>
+                <p><img src="../../assets/images/icon-personal-best.svg" alt="prize logo">Personal best: <span id="best">0</span></p>
             </div>
     </header>
-    <div class="init">
+    <div class="init" id="init">
     <section class="nav">
             <div class="stats">
                 <p>WPM:       <span id="wpm">0</span> |</p>
@@ -34,7 +34,7 @@
 
                 <div class="end">
                     <p>Mode:</p>
-                    <button>Timed(<span></span>)</button>
+                    <button>Timed(<span>60</span>)</button>
                     <button>Passage</button>
                 </div>
             </div>
@@ -49,23 +49,23 @@
         </div>
     </section>
 </div>
-<div class="ATH">
+<div class="ATH" id="ATH">
     <div>
         <div class="logo-grow-wrapper"><img src="../../assets/images/icon-completed.svg" alt="completed logo" class="logo-svg" id="img"></div>
         <h1 id="celeb-H">Baseline Established!</h1>
         <p id="celeb-p">You've set the bar. Now the real challenge begins-time to beat it.</p>
         <div>
             <div>
-                <h3>WPM:</h3>
-                <p>10</p>
+                <h3 >WPM:</h3>
+                <p id="wpm1">10</p>
             </div>
             <div>
                 <h3>Accuracy:</h3>
-                <p>90%</p>
+                <p id="acc1">90%</p>
             </div>
             <div>
                 <h3>Characters</h3>
-                <p>120/5</p>
+                <p id="words">120/5</p>
             </div>
         </div>
         <button style="background-color: white;display: flex;justify-content: center;color: black;" id="restart">Beat This Score  <img src="../../assets/images/icon-restart.svg" alt="restart allow" style="background-color: black;border-radius: 10px;height: 15px;"></button>
