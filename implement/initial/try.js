@@ -156,12 +156,14 @@ function checkScore(score,acc) {
     }
     else{
         for (let index = 0; index < scores.length; index++) {
+            console.log(scores[index]);
+            
             if (score < scores[index]) {
                 highest = false
                 break
             }
             else if (scores[index] < score) {
-                scores.push(score)
+                scores[index] = score
                 highest = true
                 console.log("1st")
                 console.log("scores "+ scores[index]);
@@ -186,8 +188,8 @@ function checkScore(score,acc) {
     wpm1.innerHTML = score
     acc1.innerHTML = acc
     words.innerHTML = charIndex + "/5"
-    best.innerHTML = `${WPM} WPM`
-    storedBest = score? sessionStorage.setItem("myBest",score + " WPM") : 0;
+    best.innerHTML = `${scores[0]} WPM`
+    storedBest = score? sessionStorage.setItem("myBest",scores[0] + " WPM") : 0;
     sessionStorage.setItem("storedArr",JSON.stringify(scores))
 
 }
