@@ -27,7 +27,7 @@ para.style.filter = "blur(3px)"
 const buttons = document.querySelectorAll('.bt')
 
 window.onload = () => {
-    storedBest = sessionStorage.getItem('myBest');
+    storedBest = sessionStorage.getItem('myBest') || '0'
     if (storedBest) {
         best.innerHTML = storedBest
     }
