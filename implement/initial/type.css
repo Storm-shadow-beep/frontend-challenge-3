@@ -196,3 +196,21 @@ button:hover{
     background-color: rgb(0, 110, 255);
     border: none;
 }
+
+.res{
+    display: none;
+    justify-content: center;
+}
+
+.res > button{
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.res >button > img{
+    height: 15px;
+    padding-left: 10px;
+    color: blue;
+}

@@ -13,6 +13,8 @@ const acc1 = document.getElementById("acc1")
 const words = document.getElementById("words")
 const best = document.getElementById("best")
 const restart = document.getElementById("restart")
+const dv_restart = document.getElementById("div_restart")
+const dv_bt = document.getElementById("div")
 
 //Other variables
 let charIndex = 0
@@ -91,6 +93,7 @@ start.addEventListener('click',()=>{
     const who = document.querySelector('.who')
     who.style.display = "none"
     para.style.filter = "blur(0px)"
+    dv_restart.style.display = "flex"
     startTimer();
 })
 
@@ -207,5 +210,9 @@ function stopTimer() {
 }
 
 restart.addEventListener('click',()=>{
+    window.location.reload();
+})
+
+dv_bt.addEventListener('click',()=>{
     window.location.reload();
 })
