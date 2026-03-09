@@ -121,10 +121,6 @@ button:hover{
     transform: translate(-50%,-50%);
 }
 
-.init{
-    /* display: none; */
-}
-
 .ATH{
     display: none;
     justify-content: center;
