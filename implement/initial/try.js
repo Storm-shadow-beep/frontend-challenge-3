@@ -23,6 +23,7 @@ let text;
 let scores = []
 let accuracy
 let storedBest = 0
+let char = false
 
 para.style.filter = "blur(3px)"
 
@@ -90,11 +91,16 @@ const timeDisplay = document.getElementById("time")
 let seconds
 
 start.addEventListener('click',()=>{
-    const who = document.querySelector('.who')
-    who.style.display = "none"
-    para.style.filter = "blur(0px)"
-    dv_restart.style.display = "flex"
-    startTimer();
+    if (char) {
+        window.alert("Select a level first")
+    }
+    else{
+        const who = document.querySelector('.who')
+        who.style.display = "none"
+        para.style.filter = "blur(0px)"
+        dv_restart.style.display = "flex"
+        startTimer();
+    }
 })
 
 function startTimer() {
@@ -124,6 +130,7 @@ window.addEventListener('keydown',(e)=>{
         return
     }
 
+    char = true
     const typedChar = e.key
     const targetChar = characters[charIndex].innerText
     
