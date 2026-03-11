@@ -1,4 +1,4 @@
-import paragraph from '../../data.json' with {type: 'json'};
+import paragraph from '../data.json' with {type: 'json'};
 
 //nodes from the dom and other variables
 const para = document.getElementById("para")
