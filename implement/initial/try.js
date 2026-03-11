@@ -15,6 +15,7 @@ const best = document.getElementById("best")
 const restart = document.getElementById("restart")
 const dv_restart = document.getElementById("div_restart")
 const dv_bt = document.getElementById("div")
+const acc = document.getElementById("acc")
 
 //Other variables
 let charIndex = 0
@@ -49,8 +50,9 @@ window.onload = () => {
 
     //paragraph level logic
 
-    buttons.forEach(button => {
+buttons.forEach(button => {
         button.addEventListener('click',()=>{
+        char = true
         const level = button.getAttribute('data-level');
         setFunc(level)
     })
@@ -91,7 +93,7 @@ const timeDisplay = document.getElementById("time")
 let seconds
 
 start.addEventListener('click',()=>{
-    if (char) {
+    if (char === false) {
         window.alert("Select a level first")
     }
     else{
@@ -151,6 +153,9 @@ window.addEventListener('keydown',(e)=>{
         stopTimer()
         console.log('stopped')
     }
+    accuracy = Math.round(((charIndex - mistakes) / charIndex) * 100)
+    acc.innerText = accuracy > 0? accuracy:0
+    wpm.innerText = charIndex
 });
 
 function updateStats(score){
