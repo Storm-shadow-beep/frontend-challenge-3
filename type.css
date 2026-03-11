@@ -1,24 +1,24 @@
 @font-face {
     font-family: "Regular";
-    src: url("../assets/fonts/Sora/static/Sora-Regular.ttf");
+    src: url("./assets/fonts/Sora/static/Sora-Regular.ttf");
     font-style: normal;
 }
 
 @font-face {
     font-family: "bold";
-    src: url('../assets/fonts/Sora/static/Sora-Bold.ttf');
+    src: url('./assets/fonts/Sora/static/Sora-Bold.ttf');
     font-style: normal;
 }
 
 @font-face {
     font-family: "semi";
-    src: url('../assets/fonts/Sora/static/Sora-SemiBold.ttf');
+    src: url('./assets/fonts/Sora/static/Sora-SemiBold.ttf');
     font-style: normal;
 }
 
 @font-face {
     font-family: "variable";
-    src: url('../assets/fonts/Sora/Sora-VariableFont_wght.ttf');
+    src: url('./assets/fonts/Sora/Sora-VariableFont_wght.ttf');
     font-style: normal;
     font-weight: 100;
 }

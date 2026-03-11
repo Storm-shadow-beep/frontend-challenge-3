@@ -1,4 +1,4 @@
-import paragraph from '../data.json' with {type: 'json'};
+import paragraph from './data.json' with {type: 'json'};
 
 //nodes from the dom and other variables
 const para = document.getElementById("para")
@@ -187,7 +187,7 @@ function checkScore(score,acc) {
             
         }
         if (highest) {
-            icon.src = "../../assets/images/icon-new-pb.svg"
+            icon.src = "./assets/images/icon-new-pb.svg"
             head.innerHTML = "High Score Smashed!"
             parag.innerHTML = "You're getting faster. That was incredible typing."
             console.log("highest");
