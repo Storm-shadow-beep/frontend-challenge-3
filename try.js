@@ -221,10 +221,8 @@ function stopTimer() {
     
 }
 
-restart.addEventListener('click',()=>{
-    window.location.reload();
-})
+const reloads = () => { window.location.reload()}
 
-dv_bt.addEventListener('click',()=>{
-    window.location.reload();
-})
+restart.addEventListener('click',reloads)
+
+dv_bt.addEventListener('click',reloads)
