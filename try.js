@@ -40,15 +40,8 @@ window.onload = () => {
         scores = JSON.parse(scores)
     }
 }
-// char.forEach(element => {
-    //         const span = document.createElement('span')
-    //         span.innerText = element
-    //         span.classList.add('char')
-    //         para.appendChild(span)
-    // });
-    
 
-    //paragraph level logic
+//Functions with event listeners
 
 buttons.forEach(button => {
         button.addEventListener('click',()=>{
@@ -57,6 +50,25 @@ buttons.forEach(button => {
         setFunc(level)
     })
 })
+
+start.addEventListener('click',()=>{
+    if (char === false) {
+        window.alert("Select a level first")
+    }
+    else{
+        const who = document.querySelector('.who')
+        who.style.display = "none"
+        para.style.filter = "blur(0px)"
+        dv_restart.style.display = "flex"
+        startTimer();
+    }
+})
+
+const reloads = () => { window.location.reload()}
+
+restart.addEventListener('click',reloads)
+
+dv_bt.addEventListener('click',reloads)
 
 function setFunc(n){
     charIndex = 0
@@ -91,19 +103,6 @@ let startTime;
 let timerInterval;
 const timeDisplay = document.getElementById("time")
 let seconds
-
-start.addEventListener('click',()=>{
-    if (char === false) {
-        window.alert("Select a level first")
-    }
-    else{
-        const who = document.querySelector('.who')
-        who.style.display = "none"
-        para.style.filter = "blur(0px)"
-        dv_restart.style.display = "flex"
-        startTimer();
-    }
-})
 
 function startTimer() {
     startTime = Date.now();
@@ -221,8 +220,3 @@ function stopTimer() {
     
 }
 
-const reloads = () => { window.location.reload()}
-
-restart.addEventListener('click',reloads)
-
-dv_bt.addEventListener('click',reloads)
