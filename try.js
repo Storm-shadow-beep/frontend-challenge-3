@@ -25,6 +25,7 @@ let scores = []
 let accuracy
 let storedBest = 0
 let char = false
+let start = document.querySelector('#start')
 
 para.style.filter = "blur(3px)"
 
@@ -98,7 +99,6 @@ function setFunc(n){
 
 //time logic
 let WPM;
-let start = document.querySelector('#start')
 let startTime;
 let timerInterval;
 const timeDisplay = document.getElementById("time")
