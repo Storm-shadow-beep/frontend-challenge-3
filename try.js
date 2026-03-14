@@ -26,6 +26,11 @@ let accuracy
 let storedBest = 0
 let char = false
 let start = document.querySelector('#start')
+let WPM;
+let startTime;
+let timerInterval;
+const timeDisplay = document.getElementById("time")
+let seconds
 
 para.style.filter = "blur(3px)"
 
@@ -98,11 +103,6 @@ function setFunc(n){
 }
 
 //time logic
-let WPM;
-let startTime;
-let timerInterval;
-const timeDisplay = document.getElementById("time")
-let seconds
 
 function startTimer() {
     startTime = Date.now();
@@ -142,6 +142,7 @@ window.addEventListener('keydown',(e)=>{
     }else{
         mistakes++
         characters[charIndex].style.color = "red"
+        characters[charIndex].style.textDecoration = "underline"
     }
 
     charIndex++
