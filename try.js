@@ -92,9 +92,9 @@ function setFunc(n){
     }
 
     para.innerHTML = "";
-    let char = text.split('')
+    let chars = text.split('')
 
-    char.forEach(element => {
+    chars.forEach(element => {
         const span = document.createElement('span')
         span.innerText = element
         span.classList.add('char')
